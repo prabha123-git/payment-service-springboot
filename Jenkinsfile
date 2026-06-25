@@ -32,10 +32,10 @@ pipeline {
         }
 
         stage('Docker Build') {
-            steps {
-                sh 'docker build -t $IMAGE_NAME:$IMAGE_TAG .'
-            }
-        }
+    steps {
+        sh 'docker build -t prabhad/payment-service:v1 .'
+    }
+}
 
         stage('Docker Push') {
             steps {
